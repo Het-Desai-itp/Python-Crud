@@ -6,6 +6,7 @@
 #Curl Commands to invoke the API in Bash Terminal
 
 Get all the users
+
 -curl http://127.0.0.1:5000/users
 
 Create a new user 
