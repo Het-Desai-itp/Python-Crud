@@ -1,0 +1,20 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
+    environment:
+      - FLASK_ENV=development
+  db:
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE={DB-Name}
+      - MYSQL_USER={User-Name}
+      - MYSQL_PASSWORD={DB-Password}
+      - MYSQL_ROOT_PASSWORD={DB-Root-Password}
